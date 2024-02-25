@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-6">
+
+            <img src="{{mlist.img.url}}" width="300" height="300"><br>
+        </div>
+        <div class="col-md-3">
+            {{mlist.name}}<br>
+            {{mlist.desc}}<br>
+            {{mlist.year}}<br>
+            <a class="btn btn-warning" href="{% url 'movieapp:update' mlist.id %}" >Update</a><br>
+            <a class="btn btn-danger" href="{% url 'movieapp:delete' mlist.id %}" >Delete</a><br>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
